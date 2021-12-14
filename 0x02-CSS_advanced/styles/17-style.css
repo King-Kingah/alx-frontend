@@ -124,7 +124,7 @@ body {
     font-family: var(--font-family-base);
     font-size: var(--font-size-medium);
     font-weight: var(--font-weight-regular);
-    min-height: var(--line-height-base);
+    line-height: var(--line-height-base);
 }
 
 a:link {
@@ -156,8 +156,10 @@ a:active {
     font-family: var(--font-family-title);
     font-size: var(--font-size-xx-large);
     font-weight: var(--font-weight-bold);
-
+    margin: var(--section-title-margin);
+    color: var(--section-title-color);
 }
+
 .section-tagline {
     color: var(--color-primary);
     font-family: var(--font-family-title);
@@ -173,8 +175,22 @@ a:active {
     margin-right: auto;
 }
 
+.section {
+    padding: var(--section-padding);
+}
+
 .section-header {
     text-align: var(--section-header-align);
+    padding: var(--section-header-padding);
+}
+
+.section-body {
+    padding: var(--section-body-padding);
+}
+
+.section-footer {
+    padding: var(--section-footer-padding);
+    text-align: var(--section-footer-align);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -188,7 +204,7 @@ h1, h2, h3, h4, h5, h6 {
     --color-white: #ffffff;
     --color-light-grey: #f3f3f3;
     --color-dark-grey: #353535;
-    --text-color: color-black;
+    --text-color: var(--color-black);
     --font-family-base: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     --font-family-title: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
     --font-size-small: 1.2rem;
@@ -205,4 +221,15 @@ h1, h2, h3, h4, h5, h6 {
     --section-tagline-transform: uppercase;
     --section-title-margin: 0;
     --section-title-color: var(--color-black);
+
+    --section-padding: 5rem 0;
+    --section-header-padding: 0 0 3rem;
+    --section-body-padding: 0 0 3rem;
+    --section-footer-padding: 3rem 0 0;
+    --section-footer-align: center;
+    --footer-padding: 5rem 0 1rem;
+}
+
+footer {
+    padding: var(--footer-padding);
 }
